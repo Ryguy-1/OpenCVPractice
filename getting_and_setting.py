@@ -20,5 +20,12 @@ print(image.shape)  # Height, then width, then channels
 (b, g, r) = image[0, 0]  # BACKWARDS???
 print(f'Pixel 0, 0 r, g, b values are {r, b, g}')
 
-image[0, 0] = (0, 0, 255)  # Set the image at 0, 0 to new rgb values.
+image[0, 0] = (0, 0, 255)  # Set the image at 0, 0 to new rgb values. -> red value of 255
+
+print(image[0, 0])  # Check to make sure it worked -> it did lol
+
+# crop image
+cropped_corner = image[0:500, 0:500]
+cv2.imshow("cropped image", cropped_corner)
+cv2.waitKey(0)
 
