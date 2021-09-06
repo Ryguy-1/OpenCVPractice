@@ -28,13 +28,20 @@ import cv2
 
 
 
-canvas = np.zeros((800, 800, 3), dtype='uint8')
-for i in range(0, 30):
-    radius = np.random.randint(10, high=100)
-    color = np.random.randint(0, high=256, size=(3,)).tolist()
-    pt = np.random.randint(0, high=800, size=(2,))
+# canvas = np.zeros((800, 800, 3), dtype='uint8')
+#
+#
+#
+# for i in range(0, 30):
+#     radius = np.random.randint(10, high=100)
+#     color = np.random.randint(0, high=256, size=(3,)).tolist()
+#     pt = np.random.randint(0, high=canvas.shape[0], size=(2,))
+#
+#     cv2.circle(canvas, tuple(pt), radius, color, -1)
+# cv2.imshow("Canvas Circles Random", canvas)
+# print(canvas[0])
+# cv2.waitKey(0)
 
-    cv2.circle(canvas, tuple(pt), radius, color, -1)
 
-cv2.imshow("Canvas Circles Random", canvas)
-cv2.waitKey(0)
+
+
