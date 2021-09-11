@@ -29,3 +29,14 @@ def resize(img, width=None, height=None, inter=cv2.INTER_AREA):
         print("Error Resizing Image")
         print(Exception)
         quit()
+
+
+def grab_contours(contours):
+    if len(contours) == 2:
+        contours = contours[0]
+    elif len(contours) == 3:
+        contours = contours[1]
+    else:
+        raise Exception(("Contours tuple must have length 2 or 3"))
+
+    return contours
